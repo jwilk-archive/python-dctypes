@@ -36,15 +36,9 @@ class DctypesError(RuntimeError):
     pass
 
 def find_library(name):
-    for frame in _inspect.stack():
-        path = frame[1]
-        frame = None
-        if path.endswith('>'):
-            raise DctypesError('non-file modules are not supported')
-        if path != __file__:
-            break
-    else:
-        raise DctypesError('cannot determine caller')
+    path = _inspect.stack()[1][1]
+    if path.endswith('>'):
+        raise DctypesError('non-file modules are not supported')
     path = os.path.splitext(path)[0] + '.dctypes'
     boot = _os.getenv('PYTHON_DCTYPES_BOOT')
     if path.startswith('/usr/'):
