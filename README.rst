@@ -14,7 +14,7 @@ Howto
 
 3) ???
 
-4) Profit! At runtime, **dctypes**'s ``find_library()`` will return only
+4) Profit! At runtime, **dctypes**' ``find_library()`` will return only
    information from the ``.dctypes`` files.
 
 Automatic dependency calculation
