@@ -25,6 +25,6 @@ Automatic dependency calculation
 to automatically calculate library dependencies, e.g. by ``dpkg-shlibdeps``.
 
 
-.. _find_library: http://docs.python.org/2/library/ctypes.html#finding-shared-libraries
+.. _find_library: https://docs.python.org/2/library/ctypes.html#finding-shared-libraries
 
 .. vim:tw=78 ts=3 sts=3 sw=3 et
