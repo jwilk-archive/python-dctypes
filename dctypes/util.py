@@ -39,7 +39,7 @@ def find_library(name):
     path = _inspect.stack()[1][1]
     if path.endswith('>'):
         raise DctypesError('non-file modules are not supported')
-    path = os.path.splitext(path)[0] + '.dctypes'
+    path = _os.path.splitext(path)[0] + '.dctypes'
     boot = _os.getenv('PYTHON_DCTYPES_BOOT')
     if path.startswith('/usr/'):
         boot = False
