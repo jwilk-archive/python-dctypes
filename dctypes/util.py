@@ -27,7 +27,7 @@ import fcntl as _fcntl
 import inspect as _inspect
 import os as _os
 
-_orig_find_libary = find_library
+_orig_find_library = find_library
 
 if __file__.endswith('.pyc'):
     __file__ = __file__[:-1]
@@ -62,7 +62,7 @@ def find_library(name):
             result = cp.get('find_library', name) or None
         except _cp.NoOptionError:
             if boot:
-                result = _orig_find_libary(name)
+                result = _orig_find_library(name)
                 cp.set('find_library', name, result or '')
                 dirty = True
             else:
