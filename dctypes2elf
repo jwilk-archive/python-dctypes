@@ -51,14 +51,11 @@ def main():
         with open(tmpdir + '/libeverything.so', 'w') as devlib:
             for soname in sonames:
                 print('INPUT({soname})'.format(soname=soname), file=devlib)
-        main_path = tmpdir + '/main.c'
-        with open(main_path, 'w'):
-            pass
         ipc.check_call([
             'gcc', '-shared', '-nostdlib',
             '-Wl,--no-as-needed',
             '-L', tmpdir, '-leverything',
-            main_path, '-o', options.output_file
+            '-o', options.output_file
         ])
     finally:
         shutil.rmtree(tmpdir)
