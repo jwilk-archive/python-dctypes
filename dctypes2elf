@@ -36,6 +36,7 @@ def main():
     ap.add_argument('-o', '--output-file', metavar='<output-file>', default='a.out')
     options = ap.parse_args()
     sonames = set()
+    os.stat(os.path.join(options.directory, ''))
     for directory, _, filenames in os.walk(options.directory):
         for filename in filenames:
             if not filename.endswith('.dctypes'):
