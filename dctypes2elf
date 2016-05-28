@@ -46,7 +46,7 @@ def main():
                 cp.readfp(file)
                 for _, soname in cp.items('find_library'):
                     sonames.add(soname)
-    tmpdir = tempfile.mkdtemp(prefix='cdtypes.')
+    tmpdir = tempfile.mkdtemp(prefix='dctypes.')
     try:
         with open(tmpdir + '/libeverything.so', 'w') as devlib:
             for soname in sonames:
