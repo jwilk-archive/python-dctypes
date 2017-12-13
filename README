@@ -12,10 +12,8 @@ Howto
    non-empty string. **dctypes** will collect information about the found
    libraries and save it to a ``.dctypes`` file.
 
-3) ???
-
-4) Profit! At runtime, **dctypes**' ``find_library()`` will return only
-   information from the ``.dctypes`` files.
+3) At runtime, **dctypes**' ``find_library()`` will return only information
+   from the ``.dctypes`` files.
 
 Automatic dependency calculation
 ================================
